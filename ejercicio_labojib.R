@@ -9,12 +9,12 @@ for (i in agosto) {
   temp_i<-as.numeric(readline("ingrese temperatura del dia"))
   
   #if para correccion de datos
-  #if (is.numeric((temp_i))=F) {
-  #  temp_i<-as.numeric(readline("vuelva a ingresar temperatura del dia"))
-  #} else {
-  #  print("ingresó mal el dato, vuelva a correr el programa")
-  #}
-#El programa corre salvo por esta parte que es la encargada de verificar si 
+  if (is.na(temp_i)) {
+    temp_i<-as.numeric(readline("vuelva a ingresar temperatura del dia"))
+  } else {
+    print("correcto, continue por favor")
+  }
+ #El programa corre salvo por esta parte que es la encargada de verificar si 
   #los datos ingresados son válidos.
   
   agosto[i]<-temp_i
